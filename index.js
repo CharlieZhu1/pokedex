@@ -159,6 +159,10 @@ async function showPokemonDetails(pokemonInfo) {
     });
     const flavorText = flavorTextObj.flavor_text.replace(/\s/g, ' ');
 
+    const imageUrl = pokemonInfo.sprites.other.dream_world.front_default || 
+    pokemonInfo.sprites.other["official-artwork"].front_default || 
+    pokemonInfo.sprites.front_default;
+
     console.log(pokemonInfo);
     console.log(types);
     console.log(abilities);
@@ -173,7 +177,7 @@ async function showPokemonDetails(pokemonInfo) {
         <div class="button-container">
             <button id="back-button">Back</button>
         </div>
-        <img class="pokemon-info-image" src="${pokemonInfo.sprites.other.dream_world.front_default}" alt="${pokemonInfo.name}" />
+        <img class="pokemon-info-image" src="${imageUrl}" alt="${pokemonInfo.name}" />
         <h2 class="pokemon-info-name">${pokemonInfo.name}</h2>
         <h2 class="pokemon-info-number">#${pokemonInfo.id}</h2>
         <div class="pokemon-info-flavor-text-container">
