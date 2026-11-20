@@ -3,12 +3,12 @@ const pokemonSection = document.querySelector('.pokemon-section');
 // Keep track of the current page the user is on. 
 let currentPage = 1;
 // The number of pokemon to display per page.
-const pageSize = 20;
+const pageSize = 12;
 const prevButton = document.querySelector('#prev-button');
 const nextButton = document.querySelector('#next-button');
 let maxPageNum = 0;
 let pageInput = document.querySelector('#page-input');
-const searchSection = document.querySelector('#search-section');
+const searchSection = document.querySelector('.search-section');
 const paginationSection = document.querySelector('.pagination-section');
 const pokemonInfoSection = document.querySelector('.pokemon-info');
 const headerTitle = document.querySelector('.header-title');

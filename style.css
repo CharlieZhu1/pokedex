@@ -67,10 +67,13 @@ main {
     align-items: center;
 }
 
-#search-section {
+.search-section {
     margin-bottom: 2rem;
     text-align: center;
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #search-title {
@@ -82,6 +85,7 @@ main {
 #search-box {
     position: relative;
     width: 100%;
+    max-width: 20rem;
     margin-bottom: 0.5rem;
 }
 
@@ -177,7 +181,7 @@ main {
 }
 
 #page-input {
-    width: 2.3rem;
+    width: 2.8rem;
     border: 0.1rem solid #c5d9f0;
     border-radius: 0.25rem;
     outline: none;
@@ -272,15 +276,15 @@ Prompt I used: Hide the arrows in the number input.
 .pokemon-info-card {
     /* background-color: #fff8e7; */
     /* background-color: #fff1f1; */
-    background-color: #ffffff;
+    background-color: #c5e5fb;
     /* background-color: #bd580a;
     background-color: #cc0000;
     background-color: #c62828; */
-    background-color: #ff3232;
-    /* background-color: #b33a1a; */
+    /* background-color: #ff3232;
+    background-color: #b33a1a; */
     /* background-color: #b33a1a;
     background-color: #c45c26; */
-    color: #fff8f0;
+    /* color: #fff8f0; */
     /* border-top: 0.35rem solid #ee1515; */
     border-radius: 1.5rem;
     padding: 1rem;
@@ -300,6 +304,40 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+    .pokemon-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pokemon-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .pokemon-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        column-gap: 1.5rem;
+        max-width: 57rem;
+    }
+
+    .button-container {
+        grid-column: span 2;
+    }
+
+    .pokemon-info-card {
+        grid-column: 2 / -1;
+        grid-row: 2 / 6;
+    }
 }
 
 .hidden {
