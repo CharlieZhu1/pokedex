@@ -2,6 +2,8 @@
 
 A simple Pokédex web app built with HTML, CSS, and JavaScript using the [PokéAPI](https://pokeapi.co/).
 
+**Live site:** [https://mi-349-pokedex.netlify.app/](https://mi-349-pokedex.netlify.app/)
+
 ## Features
 
 - Browse Pokémon with pagination
