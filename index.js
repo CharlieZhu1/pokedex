@@ -104,11 +104,13 @@ async function getPokemon() {
 async function createPokemonCard(pokemon) {
     const res = await fetch(pokemon.url);
     const pokemonInfo = await res.json();
-
+    const imageUrl = pokemonInfo.sprites.other.dream_world.front_default || 
+    pokemonInfo.sprites.other["official-artwork"].front_default || 
+    pokemonInfo.sprites.front_default;
     const card = document.createElement('div');
     card.classList.add('pokemon-card');
     card.innerHTML = `
-        <img class="pokemon-image" src="${pokemonInfo.sprites.other.dream_world.front_default}" alt="${pokemonInfo.name}" />
+        <img class="pokemon-image" src="${imageUrl}" alt="${pokemonInfo.name}" />
         <h3 class="pokemon-name">${pokemonInfo.name}</h3>
         <p class="pokemon-number">#${pokemonInfo.id}</p>
     `;
